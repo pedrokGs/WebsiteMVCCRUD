@@ -1,27 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
-            background-image: linear-gradient( #31bbc0,#223f41);
-            height: 100vh;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRUD - Operações Fundamentais</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #000;
+      background: linear-gradient(to right, #69d4ff, #67A9AB);
+    }
+    
+    nav {
+      width: 100%;
+      background-color: #967966;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #fff;
+    }
+    
+    /* Header com introdução */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    
+    /* Grid moderno para os Cards CRUD */
+    section.crud-grid {
+      display: grid;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .crud-card {
+      background: #52E7EB;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .crud-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .crud-card img {
+      width: 100%;
+      display: block;
+    }
+    
+    .crud-card-content {
+      background: #fff;
+      padding: 20px;
+      text-align: left;
+    }
+    
+    .crud-card-content h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #EB8D52;
+    }
+    
+    .crud-card-content p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin: 10px 0;
+    }
+    
+    .crud-card-content p span {
+      font-weight: bold;
+    }
+    
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
+      nav ul li a {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <ul class="crud">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="views/info.html">Informações</a></li>
-        <li><a href="views/CRUD.html">CRUD</a></li>
-        <li><a href="views/MVC.html">MVC</a></li>
-      </ul>
-
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="MVC.html">MVC</a></li>
+      <li><a href="CRUD.html">CRUD</a></li>
+    </ul>
+  </nav>
+  
+  <header>
+    <h1>Operações CRUD</h1>
+    <p>Crie, Leia, Atualize e Exclua informações com segurança e eficiência.</p>
+  </header>
+  
+  <section class="crud-grid">
+    <!-- CREATE -->
+    <div class="crud-card">
+      <img src="../assets/create.png" alt="Create">
+      <div class="crud-card-content">
+        <h2>CREATE</h2>
+        <p>
+          Adicione novos registros ao sistema com formulários intuitivos e processos de validação rigorosos, garantindo dados limpos e corretos.
+        </p>
+        <p>
+          <span>Tecnologias:</span> INSERT (SQL), POST (APIs REST)
+        </p>
+        <p>
+          <span>Cuidados:</span> Validação dos dados e segurança na inserção.
+        </p>
+      </div>
+    </div>
+    
+    <!-- READ -->
+    <div class="crud-card">
+      <img src="../assets/read.png" alt="Read">
+      <div class="crud-card-content">
+        <h2>READ</h2>
+        <p>
+          Recupere e visualize informações armazenadas de forma rápida e otimizada, proporcionando uma experiência fluida para o usuário.
+        </p>
+        <p>
+          <span>Tecnologias:</span> SELECT (SQL), GET (APIs REST)
+        </p>
+        <p>
+          <span>Cuidados:</span> Performance e otimização nas consultas ao banco.
+        </p>
+      </div>
+    </div>
+    
+    <!-- UPDATE -->
+    <div class="crud-card">
+      <img src="../assets/update.png" alt="Update">
+      <div class="crud-card-content">
+        <h2>UPDATE</h2>
+        <p>
+          Atualize registros existentes para refletir as mudanças necessárias com precisão, mantendo a integridade dos dados.
+        </p>
+        <p>
+          <span>Tecnologias:</span> UPDATE (SQL), PUT/PATCH (APIs REST)
+        </p>
+        <p>
+          <span>Cuidados:</span> Controle de versões e prevenção de conflitos.
+        </p>
+      </div>
+    </div>
+    
+    <!-- DELETE -->
+    <div class="crud-card">
+      <img src="../assets/delete.png" alt="Delete">
+      <div class="crud-card-content">
+        <h2>DELETE</h2>
+        <p>
+          Remova registros obsoletos ou desnecessários com segurança, utilizando mecanismos de verificação para minimizar riscos.
+        </p>
+        <p>
+          <span>Tecnologias:</span> DELETE (SQL), DELETE (APIs REST)
+        </p>
+        <p>
+          <span>Cuidados:</span> Uso de soft delete ou confirmação de exclusão para evitar deleções acidentais.
+        </p>
+      </div>
+    </div>
+  </section>
+  
 </body>
-
 </html>
