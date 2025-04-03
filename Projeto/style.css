@@ -2,6 +2,8 @@ body{
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
     color: #000;
+    background: linear-gradient(to right, #EB8D52 50%, #67A9AB 50%);
+
 }
 
 .container-contexto{
@@ -16,16 +18,19 @@ body{
     background-color: #E6D4B8;
     width: 80%;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    z-index: 2;
 }
 
-.container-informativo-title{
+.container-contexto-header{
     font-size: 24px;
     font-weight: bold;
     color: #000000;
     margin-bottom: 10px;
 }
 
-.container-informativo-text{
+.container-contexto-body{
     font-size: 16px;
     color: #000000;
     text-align: center;
@@ -44,7 +49,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #52E7EB;
+    background-color: #967966;
+    height: 50px;
   }
   
   li {
@@ -61,5 +67,5 @@ ul {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #38dee4;
+    background-color: #8f6951;
   }
