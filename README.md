@@ -5,3 +5,4 @@
 - **Marrom:** #967966
 - **Cinza:** #5B6B6B
 - **Marrom Escuro:** #413833
+- **Amarelo:** #FFC117

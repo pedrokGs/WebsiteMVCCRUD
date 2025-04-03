@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-    <div class="row">
-        <div class="container">
-            <!-- MVC -->
-             <div class="container-informativo">
-                <div class="container-informativo-title">MVC</div>
-                <div class="container-informativo-text">Model-View-Controller (MVC) is a software architectural pattern that separates an application into three main components: Model, View, and Controller. This separation helps in organizing code, making it more manageable and scalable.</div>
-                <div class="container-informativo-text">The Model represents the data and the business logic of the application. The View is responsible for displaying the data to the user. The Controller acts as an intermediary between the Model and the View, handling user input and updating the Model and View accordingly.</div>
-             </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="views/info.html">Informações</a></li>
+    <li><a href="views/CRUD.html">CRUD</a></li>
+    <li><a href="views/MVC.html">MVC</a></li>
+  </ul>
+
+  <div class="row">
+      <div class="container-contexto">
+        <div class="container-contexto-header">Sobre nós</div>
+
+        <div class="container-contexto-body">
+          "Nosso site é um espaço dedicado a explorar os conceitos de MVC (Model-View-Controller) e CRUD (Create, Read,
+          Update, Delete). Aqui, você encontrará explicações claras, exemplos práticos e dicas para implementar essas
+          metodologias em seus projetos. Seja você um iniciante ou um desenvolvedor experiente, nosso objetivo é tornar
+          a estruturação e a manipulação de dados mais acessíveis e eficientes!"
         </div>
-        <div class="container">
-            <!-- CRUD -->
-            <div class="container-informativo">
-                <div class="container-informativo-title">MVC</div>
-                <div class="container-informativo-text">Model-View-Controller (MVC) is a software architectural pattern that separates an application into three main components: Model, View, and Controller. This separation helps in organizing code, making it more manageable and scalable.</div>
-                <div class="container-informativo-text">The Model represents the data and the business logic of the application. The View is responsible for displaying the data to the user. The Controller acts as an intermediary between the Model and the View, handling user input and updating the Model and View accordingly.</div>
-             </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="mvc container container-descricao">
+      <div class="descricao-header">
+        MVC
+      </div>
+
+      <div class="descricao-body">
+        MVC <b>(Model-View-Controller)</b> é um padrão de arquitetura que organiza o desenvolvimento de aplicações em três camadas principais: <b>Model (Modelo), View (Visão) e Controller (Controlador).</b> Essa estrutura separa a lógica de negócios, a interface de usuário e o controle das interações, tornando o código mais organizado, reutilizável e fácil de manter. Amplamente utilizado no desenvolvimento web, o MVC facilita a construção de aplicações escaláveis e bem estruturadas.
+      </div>
+    </div>
+
+    <div class="crud container container-descricao">
+      <div class="descricao-header">
+        CRUD
+      </div>
+
+      <div class="descricao-body">
+        CRUD é um acrônimo que representa as quatro operações fundamentais na manipulação de dados: <b>Create (Criar), Read
+        (Ler), Update (Atualizar) e Delete (Excluir).</b> Essas operações são essenciais em sistemas que interagem com
+        bancos de dados, permitindo que os usuários gerenciem informações de forma eficiente. O conceito de CRUD é
+        amplamente utilizado no desenvolvimento de software e é a base para a construção de aplicações dinâmicas e
+        interativas.
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container-inferior">
+      <div class="container container-verMais mvc">
+        <div class="container-verMais">
+          <div class="verMais-body">Clique aqui para ver mais informações sobre o MVC e CRUD</div>
+          
+          <button class="mvc-button">
+            <a href="views/MVC.html">Ver mais</a>
+          </button>
+        </div>
+      </div>
+  
+      <div class="container container-exemplo mvc">
+        <img src="assets/mvc.png"alt="" height="200px" width="200px">
+      </div>
+    </div>
+
+    <div class="container-inferior">
+      <div class="container container-exemplo crud">
+        <img src="assets/crud.png" alt="" height="200px" width="200px">
+      </div>
+      <div class="container verMais crud">
+        <div class="container-verMais">
+          <div class="verMais-body">Clique aqui para ver mais informações sobre o MVC e CRUD</div>
+          
+          <button class="crud-button">
+            <a href="views/CRUD.html">Ver mais</a>
+          </button>
         </div>
     </div>
+    </div>
+
+
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+
 </html>
