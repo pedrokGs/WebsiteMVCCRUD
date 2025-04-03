@@ -6,6 +6,27 @@ body{
 
 }
 
+.container{
+    transition: scale 0.3s ease-in-out;
+    margin: 0 auto;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.container:hover{
+    scale: 1.05;
+}
+
 .container-contexto{
     margin: 0 auto;
     max-width: 800px;
@@ -21,6 +42,98 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 40px;
     z-index: 2;
+}
+
+.container-descricao{
+    margin: 0 auto;
+    max-width: 800px;
+    height: 25vh;
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #E6D4B8;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.container-inferior{
+    margin: 0 auto;
+    max-width: 800px;
+    height: 25vh;
+    max-height: 1000px;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.container-exemplo{
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.container-verMais{
+    height: 200px;
+}
+
+.crud{
+    background-color: #52E7EB;
+}
+
+.crud-button{
+    background-color: #01e6ee;
+}
+
+.mvc{
+    background-color: #FFC117;
+}
+
+.button{
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.descricao-header{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.descricao-body{
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .container-contexto-header{
