@@ -1,26 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVC</title>
-<link rel="stylesheet" href="../style.css">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo MVC</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Estilos Gerais */
     body {
-        background-image: linear-gradient(#EB8D52, #412222);
-        height: 100vh;
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #000;
+      /* Background que remete aos tons alaranjados e quentes */
+      background: linear-gradient(135deg, #eca44c, #fa7a01);
+      min-height: 100vh;
     }
 
-    li a:hover{
-        background-color: #c59100;
+    /* Barra de Navegação */
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #967966;
+      height: 50px;
+      display: flex;
+      align-items: center;
     }
-</style>
+    
+    ul.navbar li {
+      margin-right: 20px;
+    }
+    
+    ul.navbar li a {
+      color: #000;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover {
+      background-color: #8f6951;
+    }
+
+    /* Container Principal da Página MVC */
+    .mvc-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff3e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .mvc-container h1 {
+      font-size: 32px;
+      color: #e65100;
+      margin-bottom: 10px;
+    }
+
+    .mvc-description {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    /* Estilos para os Cards */
+    .card {
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+      transform: scale(1.03);
+    }
+    
+    .card-controller {
+      background-color: #FFB74D; /* Tom alaranjado para o Controller */
+    }
+    
+    .card-view {
+      background-color: #64B5F6; /* Azul para a View */
+    }
+    
+    .card-model {
+      background-color: #81C784; /* Verde para o Model */
+    }
+    
+    /* Layout dos Cards representando o esquema MVC */
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    /* A disposição dos cards View e Model em linha */
+    .bottom-cards {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .bottom-cards .card {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
-    <ul class="mvc">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="MVC.html">MVC</a></li>
-        <li><a href="CRUD.html">CRUD</a></li>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="MVC.html">MVC</a></li>
+      <li><a href="CRUD.html">CRUD</a></li>
     </ul>
+  </nav>
+  
+  <header>
+    <h1>MVC</h1>
+    <p>Modelagem, Visualização e Controle</p>
+  </header>
+
+  <div class="mvc-container">
+    <h1>Modelo MVC</h1>
+    <p class="mvc-description">
+      O Modelo MVC (Model-View-Controller) é um padrão de arquitetura que separa as responsabilidades da aplicação em três componentes principais: o Controller, a View e o Model. Essa separação torna o desenvolvimento mais modular, facilitando a manutenção e a escalabilidade.
+    </p>
+    
+    <div class="cards-container">
+      <!-- Card do Controller -->
+      <div class="card card-controller">
+        <h2>Controller (Controlador)</h2>
+        <p>
+          Responsável por receber as solicitações do usuário e interpretar as ações necessárias. O Controlador processa os dados, interage com o Model para as operações de negócio e determina qual View deverá ser renderizada. Em essência, ele atua como a ponte entre a interface e a lógica da aplicação.
+        </p>
+      </div>
+      
+      <!-- Cards da View e Model apresentados lado a lado -->
+      <div class="bottom-cards">
+        <div class="card card-view">
+          <h2>View (Visão)</h2>
+          <p>
+            Responsável pela interface com o usuário, proporcionando a exibição dos dados. A View apresenta as informações de forma clara e intuitiva, capturando também as interações dos usuários e encaminhando essas ações ao Controller.
+          </p>
+        </div>
+        
+        <div class="card card-model">
+          <h2>Model (Modelo)</h2>
+          <p>
+            Gerencia os dados e as regras de negócio da aplicação. O Modelo é responsável por armazenar, recuperar e processar informações, garantindo que os dados estejam sempre consistentes e atualizados, de acordo com as operações realizadas pelo Controller.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
