@@ -95,21 +95,20 @@ body{
 
 .container-verMais{
     height: 200px;
+    position: relative;
 }
 
 .crud{
     background-color: #52E7EB;
 }
 
-.crud-button{
-    background-color: #01e6ee;
-}
 
 .mvc{
     background-color: #FFC117;
 }
 
-.button{
+.crud-button{
+    background-color: #00c5cc;
     color: #000000;
     border: none;
     padding: 10px 20px;
@@ -120,6 +119,44 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.mvc-button{
+    background-color: #ecad00;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.crud-button:hover{
+    background-color: #009999;
+    scale: 1.05;
+}
+
+.mvc-button:hover{
+    background-color: #d39b00;
+    scale: 1.05;
+}
+
+
+button a{
+    color: #000000;
+    text-decoration: none;
 }
 
 .descricao-header{
