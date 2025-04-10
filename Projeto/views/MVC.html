@@ -79,15 +79,15 @@
     }
     
     .card-controller {
-      background-color: #FFB74D; /* Tom alaranjado para o Controller */
+      background-color:#64B5F6;;
     }
     
     .card-view {
-      background-color: #64B5F6; /* Azul para a View */
+      background-color: #81C784;
     }
     
     .card-model {
-      background-color: #81C784; /* Verde para o Model */
+      background-color: #FFB74D ; /
     }
     
     /* Layout dos Cards representando o esquema MVC */
@@ -108,6 +108,14 @@
     .bottom-cards .card {
       flex: 1;
     }
+
+    .mvcexemplo{
+      transition: 0.5s;
+    }
+
+    .mvcexemplo:hover{
+      scale: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -124,6 +132,7 @@
     <p>Modelagem, Visualização e Controle</p>
   </header>
 
+  <div class="row">
   <div class="mvc-container">
     <h1>Modelo MVC</h1>
     <p class="mvc-description">
@@ -131,7 +140,6 @@
     </p>
     
     <div class="cards-container">
-      <!-- Card do Controller -->
       <div class="card card-controller">
         <h2>Controller (Controlador)</h2>
         <p>
@@ -139,23 +147,26 @@
         </p>
       </div>
       
-      <!-- Cards da View e Model apresentados lado a lado -->
       <div class="bottom-cards">
-        <div class="card card-view">
-          <h2>View (Visão)</h2>
-          <p>
-            Responsável pela interface com o usuário, proporcionando a exibição dos dados. A View apresenta as informações de forma clara e intuitiva, capturando também as interações dos usuários e encaminhando essas ações ao Controller.
-          </p>
-        </div>
-        
         <div class="card card-model">
           <h2>Model (Modelo)</h2>
           <p>
             Gerencia os dados e as regras de negócio da aplicação. O Modelo é responsável por armazenar, recuperar e processar informações, garantindo que os dados estejam sempre consistentes e atualizados, de acordo com as operações realizadas pelo Controller.
           </p>
         </div>
+        <div class="card card-view">
+          <h2>View (Visão)</h2>
+          <p>
+            Responsável pela interface com o usuário, proporcionando a exibição dos dados. A View apresenta as informações de forma clara e intuitiva, capturando também as interações dos usuários e encaminhando essas ações ao Controller.
+          </p>
+        </div>
       </div>
     </div>
   </div>
+  <div class="mvc-container mvcexemplo">
+    <img src="../assets/mvcexemplo.jpg" alt="">
+  </div>
+  <div>
+
 </body>
 </html>
